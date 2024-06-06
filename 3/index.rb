@@ -24,8 +24,8 @@ def error(failed, error)
 end
 error(ARGV.size < 1, "Передайте 1 аргумент")
 
-number = ARGV[0].to_i
-error(number.to_s != ARGV[0], "number (#{ARGV[0]}) должен быть целочисленным значением")
+error(!ARGV[0].match?(/^[0-9]+$/), "number (#{ARGV[0]}) должен быть целочисленным значением")
+error(ARGV[0].to_i < 1, "number (#{ARGV[0]}) должен быть больше нуля")
 error(options[:size] < 1, "-v [NUMBER] должен быть больше нуля")
 
 puts "#{task(ARGV[0], options[:size])}"
