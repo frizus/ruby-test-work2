@@ -21,5 +21,5 @@ def generate_from_a(count, to)
 end
 
 def output(values)
-  values.each { |value| puts value }
+  puts values.join("\n")
 end

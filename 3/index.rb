@@ -5,7 +5,7 @@ options = {
   size: 2
 }
 opt_parser = OptionParser.new do |opts|
-  opts.on("-v", "-visual [HEIGHT]", Integer) do |v|
+  opts.on("-v", "--visual [HEIGHT]", Integer) do |v|
     options[:size] = v
   end
 end
