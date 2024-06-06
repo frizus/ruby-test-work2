@@ -1,3 +1,7 @@
+def task(count, to)
+  output(generate(count, to))
+end
+
 def generate(count, to)
   values = []
 
