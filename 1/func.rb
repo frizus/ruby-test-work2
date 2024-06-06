@@ -1,5 +1,6 @@
 def task(count, to)
   output(generate(count, to))
+  #output(generate_from_a(count, to))
 end
 
 def generate(count, to)
@@ -13,6 +14,10 @@ def generate(count, to)
   end
 
   values.sort!
+end
+
+def generate_from_a(count, to)
+  (0..to - 1).to_a.sample(count).sort!
 end
 
 def output(values)
